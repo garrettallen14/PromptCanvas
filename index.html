@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptCanvas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="app-container">
+        <div class="canvas-section">
+            <div class="toolbar">
+                <button id="pencilTool" class="tool-btn active" title="Pencil">✏️</button>
+                <button id="eraserTool" class="tool-btn" title="Eraser">🧹</button>
+                <input type="color" id="colorPicker" value="#000000">
+                <button id="undoButton" class="tool-btn" title="Undo">↩️</button>
+                <button id="redoButton" class="tool-btn" title="Redo">↪️</button>
+                <button id="resizeButton" class="tool-btn" title="Resize Canvas">📐</button>
+                <button id="downloadButton" class="tool-btn" title="Download">💾</button>
+            </div>
+            <div id="canvas-container">
+                <div id="canvas-loading" class="canvas-loading" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <div class="loading-text">Thinking...</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-section">
+            <div class="settings">
+                <h2>PromptCanvas</h2>
+                <input type="text" id="apiKey" placeholder="Enter OpenRouter API Key" />
+                <select id="model">
+                    <option value="anthropic/claude-3.5-sonnet">Claude 3.5 Sonnet</option>
+                    <option value="openai/gpt-4o-2024-11-20">GPT-4o</option>
+                    <option value="x-ai/grok-2-vision-1212">Grok 2 Vision</option>
+                    <option value="anthropic/claude-3-opus">Claude 3 Opus</option>
+                    <option value="anthropic/claude-3.5-haiku">Claude 3.5 Haiku</option>
+                    <option value="openai/o1">o1 (check OpenRouter page)</option>
+                    <option value="other">Other</option>
+                </select>
+                <div id="customModelContainer" style="display: none;">
+                    <input type="text" id="customModelInput" placeholder="Input an OpenRouter (vision) model key" />
+                </div>
+            </div>
+            
+            <div id="chatMessages" class="chat-messages"></div>
+            
+            <div class="chat-input">
+                <textarea id="chatInput" placeholder="Type your message..."></textarea>
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resize Modal -->
+    <div id="resizeModal" class="modal">
+        <div class="modal-content">
+            <h2>Resize Canvas</h2>
+            <div class="modal-body">
+                <div class="input-group">
+                    <label for="canvasWidth">Width:</label>
+                    <input type="number" id="canvasWidth" min="1" max="100" placeholder="Enter width (1-250)">
+                </div>
+                <div class="input-group">
+                    <label for="canvasHeight">Height:</label>
+                    <input type="number" id="canvasHeight" min="1" max="100" placeholder="Enter height (1-250)">
+                </div>
+                <div class="modal-buttons">
+                    <button id="cancelResize" class="modal-btn">Cancel</button>
+                    <button id="confirmResize" class="modal-btn primary">Resize</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/canvas.js"></script>
+    <script src="js/messageHandler.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
