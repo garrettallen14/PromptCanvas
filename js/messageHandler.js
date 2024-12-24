@@ -15,7 +15,7 @@ BACKGROUND: (r,g,b)                   - Set background color
 COLOR: (x,y) (r,g,b)                  - Draw a single point
 TRIANGLE: (x1,y1) (x2,y2) (x3,y3) (r,g,b)  - Draw a triangle
 
-- Coordinates must be 0-(current canvas dimensions)
+- Coordinates must be 0-99 (or the current canvas dimensions, as they change)
 - Colors (r,g,b) must be 0-255
 - You can add to the existing image; no need to redraw everything
 - Respond with commands only, one per line
