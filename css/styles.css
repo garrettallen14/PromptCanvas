@@ -131,7 +131,7 @@ html, body {
 .settings {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     padding: 10px;
     background-color: var(--input-bg);
     border-radius: 8px;
@@ -234,6 +234,38 @@ html, body {
 .chat-input button:disabled {
     background-color: var(--border-color);
     cursor: not-allowed;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Changed from flex-end to center */
+    gap: 8px;
+    margin: 0;
+    margin-bottom: 10px; /* Added margin-bottom for spacing */
+}
+
+/* You might also want to adjust the h2 margin/padding */
+.title-container h2 {
+    margin: 0;
+    color: var(--active-color);
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 4px; /* Added some padding for better spacing */
+}
+
+/* Optionally adjust the github-link spacing */
+.github-link {
+    color: var(--text-color);
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    margin-left: 4px; /* Added small margin for better spacing */
+}
+
+.github-link:hover {
+    color: var(--active-color);
 }
 
 /* Modal Styles */

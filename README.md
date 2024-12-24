@@ -1,16 +1,16 @@
 # PromptCanvas
 
-A minimal interface for exploring LLM spatial reasoning through pixel art generation.
+A pixel art interface for understanding how language models interpret and visualize concepts through drawing.
 
 https://garrettallen14.github.io/PromptCanvas/
 
 ## What it does
 
 PromptCanvas lets you:
-- Draw pixel art collaboratively with LLMs
-- Test how models handle precise spatial instructions  
-- Track changes between human and AI modifications
-- Analyze command execution patterns
+- Collaborate with LLMs on pixel art creation
+- Explore how models interpret abstract concepts visually  
+- See differences in how models approach creative tasks
+- Study model personality through artistic expression
 
 ## Technical Overview
 
