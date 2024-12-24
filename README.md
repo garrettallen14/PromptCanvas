@@ -2,6 +2,8 @@
 
 A minimal interface for exploring LLM spatial reasoning through pixel art generation.
 
+https://garrettallen14.github.io/PromptCanvas/
+
 ## What it does
 
 PromptCanvas lets you:
